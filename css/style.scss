@@ -983,23 +983,29 @@ a, button, .logo{
         height: 100%;
     }
 
-    @media screen and (max-width: 1170px) {
-        left: 36%;
+    @media screen and (max-width: 1200px) {
+        left: 51%;
     }
-    @media screen and (max-width: 970px) {
-        left: 27%;
+    @media screen and (max-width: 1170px) {
+        left: 50%;
+    }
+    @media screen and (max-width: 1100px) {
+        left: 38%;
     }
     @media screen and (max-width: 905px) {
         top: -38px;
-        left: 24%;
+        left: 43%;
+    }
+    @media screen and (max-width: 880px) {
+        left: 26%;
     }
     @media screen and (max-width: 750px) {
-        left: 11%;
+        left: 28%;
     }
 
     @media screen and (max-width: 678px) {
         position: relative;
-        top: -25px;
+        top: 0px;
         left: -18px;
         width: 251px;
         height: 360px;
