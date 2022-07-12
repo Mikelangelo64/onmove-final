@@ -647,7 +647,7 @@ $(document).ready(function () {
         let currentImg = 0
         let dopCounter = 0
 
-        const modelTopCenter = modelContainer.css('top').substring(0, $(modelContainer).css('top').length - 2)
+        //const modelTopCenter = modelContainer.css('top').substring(0, $(modelContainer).css('top').length - 2)
 
 
         // $('.main').mousemove(function(e) {
@@ -815,12 +815,12 @@ $(document).ready(function () {
     //ROAD FUCKING MAP-----------------------------------------
 
     //let [card1, card2, card3, card4, card5] = Array.from($('.roadmap-list__item'))
-    let cards = Array.from($('.roadmap-list__item'))
+    // let cards = Array.from($('.roadmap-list__item'))
 
-    let containerWidth = $('.roadmap-list').width()
-    let cardWidth = $('.roadmap-list__item').outerWidth()
+    // let containerWidth = $('.roadmap-list').width()
+    // let cardWidth = $('.roadmap-list__item').outerWidth()
 
-    let currentIndex = 0
+    // let currentIndex = 0
 
     // console.log('container', containerWidth);
     // console.log('card', cardWidth);
