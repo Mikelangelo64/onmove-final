@@ -123,7 +123,7 @@ $(document).ready(function () {
             preload: {
                 selector: `.preload-2`,
                 itemSelector: `.preload__letter__2`,
-                text: `get_the_app`,
+                text: `downloads`,
             }
         },{
             preload: {
@@ -154,7 +154,7 @@ $(document).ready(function () {
             preload: {
                 selector: `.preload-f-2`,
                 itemSelector: `.preload__letter__f__2`,
-                text: `get_the_app`,
+                text: `downloads`,
             }
         },{
             preload: {
@@ -177,6 +177,53 @@ $(document).ready(function () {
         },
 
     ]
+    let tokenomics = [
+        {
+            preload: {
+                selector: `.preload-t-1`,
+                itemSelector: `.preload__letter__t__1`,
+                text: `PRIVATE_sale`,
+            }
+        },{
+            preload: {
+                selector: `.preload-t-2`,
+                itemSelector: `.preload__letter__t__2`,
+                text: `Advisors`,
+            }
+        },{
+            preload: {
+                selector: `.preload-t-3`,
+                itemSelector: `.preload__letter__t__3`,
+                text: `Marketing`,
+            }
+        },{
+            preload: {
+                selector: `.preload-t-4`,
+                itemSelector: `.preload__letter__t__4`,
+                text: `FOUNDERS_&_team`,
+            }
+        },{
+            preload: {
+                selector: `.preload-t-5`,
+                itemSelector: `.preload__letter__t__5`,
+                text: `IDO`,
+            }
+        },
+        {
+            preload: {
+                selector: `.preload-t-6`,
+                itemSelector: `.preload__letter__t__6`,
+                text: `Ecosystem_&_Treasury`,
+            }
+        },{
+            preload: {
+                selector: `.preload-t-7`,
+                itemSelector: `.preload__letter__t__7`,
+                text: `USERS_AWARDS`,
+            }
+        },
+
+    ]
     
     menus.forEach((item) => {
         //setTimeout(() => {
@@ -185,6 +232,10 @@ $(document).ready(function () {
             
            // $(`.footer-main__list ${item.preload.selector}`).mouseenter(()=> Preload(item))
         //}, 1000);
+    })
+
+    tokenomics.forEach((item) => {
+        $(item.preload.selector).mouseenter(()=> Preload(item))
     })
 
     function randomNum(min, max) {
@@ -209,7 +260,8 @@ $(document).ready(function () {
             
         }
         function letterRandomize(el, index, intervals, unique, text) {
-            let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZ&_";
+            //let possible = "lox";
             intervals[index+unique] = setInterval(function(){
               el.innerHTML = possible.charAt(Math.floor(Math.random() * possible.length))
             }, 50);
@@ -249,15 +301,26 @@ $(document).ready(function () {
     $('.show-video').click(function(e){
         e.preventDefault()
 
-        $('.pop-up-video').addClass('_avtive-video')
+        $('.pop-up-video').addClass('_avtive-pop-up')
         $('.video__item ')[0].load()
         $('.video__item ')[0].play()
     })
-    $('.pop-up-video__close__btn').click(function(e){
+    $('.pop-up__close__btn').click(function(e){
         e.preventDefault()
 
-        $('.pop-up-video').removeClass('_avtive-video')
+        $('.pop-up').removeClass('_avtive-pop-up')
         $('.video__item ')[0].pause()
+    })
+
+    //downloads pop up
+    $('.show-downloads').click(function(e){
+        e.preventDefault()
+
+        $('.pop-up-downloads').addClass('_avtive-pop-up')
+    })
+
+    $('.downloads__btn').click((e) => {
+        $('.downloads-list__notice').addClass('_active-notice')
     })
 
     //header-move
@@ -285,6 +348,7 @@ $(document).ready(function () {
     })
 
     function onMenuLinkClick(event){
+        event.preventDefault();
         const menuLink = event.target;
 	    const goto = $(menuLink).attr('data-goto');
         if(goto && $(goto)){
@@ -300,7 +364,7 @@ $(document).ready(function () {
             $(".menu__close").removeClass('_active-menu')
             $('body').removeClass('_lock')
         }
-        event.preventDefault();
+        
     }
 
     //main overtake
@@ -359,7 +423,9 @@ $(document).ready(function () {
 
     //TEAM-hide 
     let lastItems = []
+    let lastItemsDop = []
     let teamItems = Array.from($('.team-list.team-list__main li'))
+    let teamItemsDop = Array.from($('.team-list.team-list__dop li'))
         //console.log(teamItems);
 
     function chooseLastItems(countOfLast, teamItems, lastItems){
@@ -373,22 +439,38 @@ $(document).ready(function () {
 
     if(document.documentElement.clientWidth <= 1020) {
         chooseLastItems(3, teamItems, lastItems)
+        chooseLastItems(3, teamItemsDop, lastItemsDop)
     }
-    if(document.documentElement.clientWidth < 690) {
-        chooseLastItems(2, teamItems, lastItems)
-    }
+    // if(document.documentElement.clientWidth < 690) {
+    //     chooseLastItems(2, teamItems, lastItems)
+    //     chooseLastItems(2, teamItemsDop, lastItemsDop)
+    // }
 
     //console.log(lastItems);
 
     lastItems.forEach((item, index) => {
         $(item).fadeOut(200)
     })
+    lastItemsDop.forEach((item, index) => {
+        $(item).fadeOut(200)
+    })
 
-    $(".team-list__btn__show").click(function (e) { 
+    $(".team-list__btn__show.team-list__main").click(function (e) { 
         e.preventDefault();
+
+        $(this).fadeOut(200)
         lastItems.forEach((item, index) => {
             $(item).fadeIn(200)
-            $(this).fadeOut(200)
+            
+        })
+    });
+    $(".team-list__btn__show.team-list__dop").click(function (e) { 
+        e.preventDefault();
+
+        $(this).fadeOut(200)
+        lastItemsDop.forEach((item, index) => {
+            $(item).fadeIn(200)
+            
         })
     });
 
@@ -863,6 +945,7 @@ $(document).ready(function () {
             // },
             slidesPerView: 1,
             spaceBetween: 20,
+            //autoHeight: true,
             loop: false,
 
             pagination: {
