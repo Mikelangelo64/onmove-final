@@ -219,7 +219,7 @@ $(document).ready(function () {
             preload: {
                 selector: `.preload-t-7`,
                 itemSelector: `.preload__letter__t__7`,
-                text: `USERS_AWARDS`,
+                text: `USERS AWARDS`,
             }
         },
 
@@ -249,7 +249,8 @@ $(document).ready(function () {
 
         function Preload(options) {
             let preloadLetters = document.querySelectorAll(options.preload.itemSelector);
-            let text = options.preload.text.toUpperCase().split('');
+            //let text = options.preload.text.toUpperCase().split('');
+            let text = options.preload.text.split('');
             let intervals = [];
 
               for(let i = 0; i < text.length; i++) {

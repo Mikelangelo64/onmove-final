@@ -17,7 +17,7 @@ body{
 //font-family: 'Manrope', sans-serif;
 //font-family: 'Red Hat Text', sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Manrope:wght@400;600&family=Red+Hat+Text:wght@500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap');
 
 //GENERAL--------------------------------------------
 $normal: 'Manrope', sans-serif;
@@ -129,14 +129,24 @@ $ease-quint: ease;
 
 h1{
     font-family: $normal;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 96px;
     line-height: 108%;
     letter-spacing: -0.02em;
     text-transform: uppercase;
 
-    color: #000000;
+    color: #303030;
 
+    strong{
+        background: -webkit-linear-gradient(180deg, #8556EE, #B868DE);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
+    }
+
+    @media screen and (max-width: 1040px) {
+        font-size: 76px;
+    }
     @media screen and (max-width: 905px) {
         font-size: 64px;
     }
@@ -178,7 +188,10 @@ h3{
 }
 
 h1.title{
-    margin-bottom: 90px;
+    margin-bottom: 108px;
+    @media screen and (max-width: 1040px) {
+        margin-bottom: 170px;
+    }
     @media screen and (max-width: 905px) {
         margin-bottom: 54px;
      //    font-size: 55px;
@@ -1003,36 +1016,40 @@ a, button, .logo{
 
 //MAIN-SECTION----------------------------------------------
 .main {
-    overflow: hidden;
+    overflow-y: visible;
+    overflow-x: clip;
     
     background-image: linear-gradient(180deg, #D6D3FF 0%, #D9ABDD 99.99%, rgba(242, 178, 213, 0) 100%);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 
-    padding-bottom: 60px;
-    margin-bottom: -64px;
+    padding-bottom: 20px;
+    //margin-bottom: -64px;
     transition: all .1s linear;
 
     @media screen and (max-width: 1130px) {
-        padding-bottom: 64px;
+        padding-bottom: 20px;
     }
     @media screen and (max-width: 905px) {
         padding: 70px 0 135px;
     }
-    @media screen and (max-width: 803px) {
-        padding-bottom: 140px;
+    @media screen and (max-width: 884px) {
+        padding: 70px 0 55px;
     }
+    // @media screen and (max-width: 803px) {
+    //     padding-bottom: 140px;
+    // }
     @media screen and (max-width: 678px) {
-        padding-bottom: 100px;
+        padding-bottom: 40px;
     }
 
     
     //.main__container 
     &__container {
-        padding: 60px 0;
+        padding: 50px 0 0;
         position: relative;
 
         @media screen and (max-width: 905px) {
@@ -1043,7 +1060,7 @@ a, button, .logo{
     //.main__grid
     &__grid{
         position: absolute;
-        top: 0px;
+        top: 20px;
         left: 0;
         width: 100%;
         height: auto;
@@ -1118,8 +1135,8 @@ a, button, .logo{
 .main__model {
     position: absolute;
     pointer-events: none;
-    top: -35px;
-    left: 45%;
+    top: -54px;
+    left: 40%;
     width: 593px;
     height: 850px;
     z-index: 5;
@@ -1144,23 +1161,27 @@ a, button, .logo{
     }
 
     @media screen and (max-width: 1200px) {
-        left: 51%;
+        //left: 51%;
     }
     @media screen and (max-width: 1170px) {
-        left: 50%;
+       left: 34%;
     }
     @media screen and (max-width: 1100px) {
-        left: 38%;
+        left: 37%;
+        width: 500px;
+        height: 717px;
     }
     @media screen and (max-width: 905px) {
         top: -38px;
-        left: 43%;
+        left: 35%;
+
     }
-    @media screen and (max-width: 880px) {
-        left: 26%;
+    @media screen and (max-width: 884px) {
+        //left: 26%;
+        left: 40%;
     }
     @media screen and (max-width: 750px) {
-        left: 28%;
+        //left: 28%;
     }
 
     @media screen and (max-width: 678px) {
@@ -1183,15 +1204,21 @@ a, button, .logo{
 }
 
 .main-content {
-    flex: 0 0 53%;
+    flex: 0 0 60%;
 
     //.main-content__overtake 
     &__overtake {
-        position: absolute; 
-        z-index: 4;
+
+
+        &.overtake__mob{
+            display: none;
+            position: absolute; 
+            z-index: 4;
+            
+            top: 60px;
+            right: 35px;
+        }
         
-        top: 60px;
-        right: 35px;
 
         width: 138px;
         height: 38px;
@@ -1202,7 +1229,7 @@ a, button, .logo{
         align-items: center;
         justify-content: center;
         padding: 7px 0;
-        margin-bottom: 24px;
+        margin-bottom: 12px;
 
         @media screen and (max-width: 905px) {
             //margin-bottom: 40px;
@@ -1258,6 +1285,9 @@ a, button, .logo{
             transform: translate(0, -26px);
             padding-right: 24px;
 
+            @media screen and (max-width: 1040px) {
+                transform: translate(0, -11px);
+            }
             @media screen and (max-width: 905px) {
                 width: 156px;
                 height: 69px;
@@ -1307,16 +1337,16 @@ a, button, .logo{
 
 
 .main-socials {
-   // max-width: 452px;
+    max-width: 478px;
     width: 100%;
     display: flex;
-  //  justify-content: space-between;
+    justify-content: space-between;
 
    // @media screen and (max-width: 905px) {
-        flex-direction: column;
-        max-width: unset;
-        margin-right: 30px;
-        flex: 0 0 104px;
+        // flex-direction: column;
+        // max-width: unset;
+        // margin-right: 30px;
+        // flex: 0 0 104px;
    // }
 
     &.main-content__socials {
@@ -1342,13 +1372,13 @@ a, button, .logo{
         background-color: #fff;
         color: #000;
         width: 140px;
-       // margin-right: 16px;
+        margin-right: 16px;
 
         &:last-child{
             margin-right: 0;
         }
       //  @media screen and (max-width: 905px) {
-            margin-bottom: 37px;
+            //margin-bottom: 37px;
             &:last-child{
                 margin-bottom: 0;
             }
@@ -1415,14 +1445,25 @@ a, button, .logo{
     align-items: flex-start;
     width: 100%;
 
+    @media screen and (max-width: 884px) {
+        flex-direction: column;
+    }
+
 }
 .main-description {
-    max-width: 265px;
+    max-width: 221px;
     width: 100%;
     position: relative;
     z-index: 2;
 
+    @media screen and (max-width: 1100px) {
+        max-width: 173px;
+    }
+
+    
+
     @media screen and (max-width: 678px) {
+        // max-width: 221px;
         max-width: unset; //247
         width: 100%;
         //margin-left: 0;
@@ -1438,16 +1479,27 @@ a, button, .logo{
     &.main-content__description{
         //display: none;
         //@media screen and (max-width: 905px) {
-            display: block;
+            display: none;
             margin-bottom: 34px;
        // }
+        // @media screen and (max-width: 678px) {
+        //     display: none;
+        // }
+        @media screen and (max-width: 884px) {
+            display: block;
+            max-width: 260px;
+        }
         @media screen and (max-width: 678px) {
             display: none;
         }
+
     }
     &.main-banner__description {
-        display: none;
+        display: block;
         @media screen and (max-width: 905px) {
+            display: block;
+        }
+        @media screen and (max-width: 884px) {
             display: none;
         }
         @media screen and (max-width: 678px) {
@@ -1467,6 +1519,10 @@ a, button, .logo{
         text-transform: uppercase;
         color: #FFFFFF;
         margin-bottom: 24px;
+
+        @media screen and (max-width: 884px) {
+            max-width: 260px;
+        }
 
         @media screen and (max-width: 678px) {
             font-size: 36px;  
@@ -1511,6 +1567,7 @@ a, button, .logo{
     background-color: #fff;
     position: relative;
     overflow: hidden;
+    z-index: 1;
 
     @media screen and (max-width: 640px) {
         border-bottom-left-radius: 0 !important;
@@ -1629,6 +1686,7 @@ a, button, .logo{
     
     //.ecosystem-earn-label__crossovok 
     &__crossovok {
+        display: none;
         width: 130px;
         @media screen and (max-width: 830px) {
             width: 110px;
@@ -2666,7 +2724,7 @@ a, button, .logo{
         filter: blur(120px);
         border-radius: 50%;
 
-        @media screen and (max-width: 1020px) {
+        @media screen and (max-width: 1070px) {
             display: none;
         }
     }
@@ -2710,7 +2768,7 @@ a, button, .logo{
 
     //.tokenomics__container
     &__container{
-        @media screen and (max-width: 1020px) {
+        @media screen and (max-width: 1070px) {
             max-width: unset;
         }
     }
@@ -2730,7 +2788,7 @@ a, button, .logo{
         @media screen and (max-width: 1200px) {
             padding: 44px 28px;
         }
-        @media screen and (max-width: 1020px) {
+        @media screen and (max-width: 1070px) {
             padding: 50px 28px;
             flex-direction: column;
 
@@ -2767,7 +2825,7 @@ a, button, .logo{
 
         &.tokenomics__title__mob{
             display: none;
-            @media screen and (max-width: 1020px) {
+            @media screen and (max-width: 1070px) {
                 display: block;
                 margin-bottom: 10px;
                 position: relative;
@@ -2775,7 +2833,7 @@ a, button, .logo{
             }
         }
         &.tokenomics__title__desk{
-            @media screen and (max-width: 1020px) {
+            @media screen and (max-width: 1070px) {
                 display: none;
             }
         }
@@ -2794,7 +2852,7 @@ a, button, .logo{
     @media screen and (max-width: 1180px) {
         margin-right: 15px;
     }
-    @media screen and (max-width: 1020px) {
+    @media screen and (max-width: 1070px) {
         margin-right: 0;
         margin-bottom: 43px;
         flex: unset;
@@ -2980,6 +3038,9 @@ a, button, .logo{
             .tokenomics-statistic__color {
                 background-color: #FF00C7;
             }
+            .tokenomics-statistic__name {
+                font-weight: 700;
+            }
         }
         // &.item__for__diagram__sector__1:hover ~ .diagram__sector__1,
         // &.item__for__diagram__sector__2:hover ~ .diagram__sector__2,
@@ -3060,10 +3121,20 @@ a, button, .logo{
         span{
             pointer-events: none;
         }
+        strong{
+            display: flex;
+        }
 
         @media screen and (max-width: 620px) {
             font-size: 14px;
         }
+        @media screen and (max-width: 370px) {
+            flex-wrap: wrap;
+            strong{
+                flex: 0 0 100%;
+            }
+        }
+
     }
 }
 
