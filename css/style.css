@@ -3679,7 +3679,6 @@ a, button, .logo {
   cursor: url(../assets/img/cursor-big.svg), auto;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  background-color: #FFFFFF;
   border: 1px solid #000000;
   border-radius: 32px;
   padding: 24px 18px;
@@ -3697,26 +3696,11 @@ a, button, .logo {
 .roadmap-list__item.ongoing {
   background-color: #61DE9B;
 }
-@media screen and (max-width: 850px) {
-  .roadmap-list__item.ongoing.swiper-slide-active {
-    background-color: #fff;
-  }
-}
 .roadmap-list__item.upcoming {
   background-color: #D2C3FF;
 }
-@media screen and (max-width: 850px) {
-  .roadmap-list__item.upcoming.swiper-slide-active {
-    background-color: #fff;
-  }
-}
 .roadmap-list__item.future {
   background-color: #6C9EFF;
-}
-@media screen and (max-width: 850px) {
-  .roadmap-list__item.future.swiper-slide-active {
-    background-color: #fff;
-  }
 }
 .roadmap-list__item.complete:hover h3.roadmap-list__title, .roadmap-list__item.ongoing:hover h3.roadmap-list__title, .roadmap-list__item.upcoming:hover h3.roadmap-list__title, .roadmap-list__item.future:hover h3.roadmap-list__title {
   color: #865CFC;
