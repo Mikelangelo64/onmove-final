@@ -97,9 +97,9 @@ $(document).ready(function () {
     wow.init();
 
     //parallax
-    // if(document.documentElement.clientWidth > 768) {
-    //     var s = skrollr.init();
-    // }
+    if(document.documentElement.clientWidth > 768) {
+        var s = skrollr.init();
+    }
 
     //h1 appear
     const showTitle = () => {
