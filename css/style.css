@@ -2152,7 +2152,7 @@ a, button, .logo {
 }
 @media screen and (max-width: 625px) {
   .ecosystem-list__card {
-    height: 220px;
+    height: 240px;
   }
 }
 .ecosystem-list__card:hover .ecosystem-list__back, .ecosystem-list__card:hover .ecosystem-list__front {
@@ -2191,7 +2191,7 @@ a, button, .logo {
 }
 @media screen and (max-width: 625px) {
   .ecosystem-list .ecosystem-list__back, .ecosystem-list .ecosystem-list__front {
-    min-height: 220px;
+    min-height: 240px;
   }
 }
 .ecosystem-list__back {
@@ -2219,7 +2219,6 @@ a, button, .logo {
 }
 .ecosystem-list__inner {
   padding: 40px;
-  min-height: 176px;
   -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
   transform: translateY(-50%) translateZ(60px) scale(0.94);
   top: 50%;
@@ -2243,18 +2242,33 @@ a, button, .logo {
   perspective: inherit;
   z-index: 2;
 }
-.ecosystem-list__inner p, .ecosystem-list__inner h3 {
+.ecosystem-list__inner p, .ecosystem-list__inner h3, .ecosystem-list__inner ul {
   position: relative;
   margin: auto;
 }
-.ecosystem-list__inner p {
+.ecosystem-list__inner p, .ecosystem-list__inner ul {
   font-family: "Manrope", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 14px;
   line-height: 21px;
   text-transform: lowercase;
+  letter-spacing: -0.03em;
   color: #000000;
-  text-align: center;
+  text-align: left;
+}
+.ecosystem-list__inner li {
+  position: relative;
+  padding-left: 14px;
+}
+.ecosystem-list__inner li:before {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 3px;
+  background-color: #000;
+  border-radius: 50%;
+  top: 9px;
+  left: 0;
 }
 .ecosystem-list h3.ecosystem-list__title {
   color: #000;
@@ -2262,14 +2276,14 @@ a, button, .logo {
 }
 .ecosystem-list__indicator {
   position: absolute;
-  top: -15px;
+  top: 20px;
   right: 25px;
   width: 32px;
   height: 32px;
 }
 @media screen and (max-width: 625px) {
   .ecosystem-list__indicator {
-    top: 0;
+    top: 20;
     right: 20px;
   }
 }
