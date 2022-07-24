@@ -3781,9 +3781,9 @@ a, button, .logo {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 .roadmap-list__tactic li {
   display: -webkit-box;
@@ -4889,6 +4889,12 @@ a, button, .logo {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 900px) {
+  .footer-main .footer-copyrights {
+    margin-bottom: 0;
+  }
 }
 @media screen and (max-width: 510px) {
   .footer-main .footer-copyrights {
