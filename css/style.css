@@ -2170,10 +2170,10 @@ a, button, .logo {
     margin-right: 0px;
   }
 }
-.ecosystem-list__card__container:nth-child(1) .ecosystem-list__front {
+.ecosystem-list__card__container:nth-child(1) .ecosystem-list__back {
   background-color: #fff;
 }
-.ecosystem-list__card__container:nth-child(1) .ecosystem-list__back {
+.ecosystem-list__card__container:nth-child(1) .ecosystem-list__front {
   background-image: url(../assets/img/img-ecosystem-card-1.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -2185,10 +2185,10 @@ a, button, .logo {
 .ecosystem-list__card__container:nth-child(2) .ecosystem-list__front {
   background-image: url(../assets/img/img-ecosystem-card-2.png);
 }
-.ecosystem-list__card__container:nth-child(3) .ecosystem-list__front {
+.ecosystem-list__card__container:nth-child(3) .ecosystem-list__back {
   background-color: #fff;
 }
-.ecosystem-list__card__container:nth-child(3) .ecosystem-list__back {
+.ecosystem-list__card__container:nth-child(3) .ecosystem-list__front {
   background-image: url(../assets/img/img-ecosystem-card-3.png);
 }
 .ecosystem-list__card__container:nth-child(4) .ecosystem-list__back {
@@ -2197,10 +2197,10 @@ a, button, .logo {
 .ecosystem-list__card__container:nth-child(4) .ecosystem-list__front {
   background-image: url(../assets/img/img-ecosystem-card-4.png);
 }
-.ecosystem-list__card__container:nth-child(5) .ecosystem-list__front {
+.ecosystem-list__card__container:nth-child(5) .ecosystem-list__back {
   background-color: #fff;
 }
-.ecosystem-list__card__container:nth-child(5) .ecosystem-list__back {
+.ecosystem-list__card__container:nth-child(5) .ecosystem-list__front {
   background-image: url(../assets/img/img-ecosystem-card-5.png);
 }
 .ecosystem-list__card__container:nth-child(6) .ecosystem-list__back {

@@ -2058,10 +2058,10 @@ a, button, .logo{
 
         &:nth-child(1){
 
-            .ecosystem-list__front {
+            .ecosystem-list__back {
                 background-color: #fff;
             }
-            .ecosystem-list__back {
+            .ecosystem-list__front {
                 background-image: url(../assets/img/img-ecosystem-card-1.png);
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -2077,10 +2077,10 @@ a, button, .logo{
             }
         }
         &:nth-child(3){
-            .ecosystem-list__front {
+            .ecosystem-list__back {
                 background-color: #fff;
             }
-            .ecosystem-list__back {
+            .ecosystem-list__front {
                 background-image: url(../assets/img/img-ecosystem-card-3.png);
             }
         }
@@ -2093,10 +2093,10 @@ a, button, .logo{
             }
         }
         &:nth-child(5){
-            .ecosystem-list__front {
+            .ecosystem-list__back {
                 background-color: #fff;
             }
-            .ecosystem-list__back {
+            .ecosystem-list__front {
                 background-image: url(../assets/img/img-ecosystem-card-5.png);
             }
         }
