@@ -17,7 +17,7 @@ body{
 //font-family: 'Manrope', sans-serif;
 //font-family: 'Red Hat Text', sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Manrope:wght@400;600&family=Red+Hat+Text:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
 
 //GENERAL--------------------------------------------
 $normal: 'Manrope', sans-serif;
@@ -2075,6 +2075,12 @@ a, button, .logo{
             .ecosystem-list__front { 
                 background-image: url(../assets/img/img-ecosystem-card-2.png);
             }
+            // .ecosystem-list__indicator {
+            //     top: 30px;
+            //     @media screen and {
+                    
+            //     }
+            // }
         }
         &:nth-child(3){
             .ecosystem-list__back {
@@ -2122,7 +2128,7 @@ a, button, .logo{
         //height: 100%;
         width: 100%;
 
-        height: 264px;
+        height: 275px;
         // display: flex;
         // flex-direction: column;
         // align-items: center;
@@ -2162,13 +2168,13 @@ a, button, .logo{
 
     .ecosystem-list__back, .ecosystem-list__front {
         border-radius: 24px;
-        border: 1px solid #000000;
+        
         
         // overflow: hidden;
 
 
         background-size: cover;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
+        //box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
         background-position: center;
         -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
         transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
@@ -2179,7 +2185,7 @@ a, button, .logo{
                 backface-visibility: hidden;
         text-align: center;
 
-        min-height: 264px;
+        min-height: 275px;
 
         @media screen and (max-width: 625px) {
             min-height: 240px;
@@ -2188,7 +2194,7 @@ a, button, .logo{
     } 
     //.ecosystem-list__back 
     &__back {
-
+        border: 1px solid #000000;
         position: absolute;
         top: 0;
         left: 0;
@@ -2211,6 +2217,7 @@ a, button, .logo{
     
     //.ecosystem-list__front 
     &__front {
+        
         -webkit-transform: rotateY(0deg);
         transform: rotateY(0deg);
         -webkit-transform-style: preserve-3d;
@@ -2220,6 +2227,7 @@ a, button, .logo{
     //.ecosystem-list__inner 
     &__inner {
         padding: 40px;
+        height: 100%;
         // min-height: 176px;
         -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
             transform: translateY(-50%) translateZ(60px) scale(0.94);
@@ -2287,8 +2295,8 @@ a, button, .logo{
         position: absolute;
         top: 20px;
         right: 25px;
-        width: 32px;
-        height: 32px;
+        width: 20px;
+        height: 20px;
 
         @media screen and (max-width: 625px) {
             top: 20;
@@ -3809,12 +3817,12 @@ a, button, .logo{
         
         
         //width: 296px;
-        height: 540px;
+        height: 830px;
         
         
-        @media screen and (max-width: 1110px) {
+       // @media screen and (max-width: 1110px) {
             padding-bottom: 64px;
-        }
+        //}
 
         // @media screen and (min-width: 890px) {
         //     width: unset;
@@ -3868,7 +3876,7 @@ a, button, .logo{
             background-color: #FBA95D;
             @media screen and (max-width: 850px) {
                 &.swiper-slide-active{
-                    background-color: #fff;
+                    //background-color: #fff;
                 }
             }
             
@@ -3968,6 +3976,10 @@ a, button, .logo{
         position: relative;
         margin-bottom: 7px;
         transition: all .3s ease;
+
+        span{
+            display: block;
+        }
 
         @media screen and (max-width: 530px) {
             color: #865CFC;
@@ -5132,6 +5144,8 @@ a, button, .logo{
         }
     }
     .footer__btn{
+        position: relative;
+        z-index: 2;
         @media screen and (max-width: 900px) {
             margin-bottom: 70px;
         }

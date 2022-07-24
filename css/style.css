@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Manrope:wght@400;600&family=Red+Hat+Text:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2211,7 +2211,7 @@ a, button, .logo {
 }
 .ecosystem-list__card {
   width: 100%;
-  height: 264px;
+  height: 275px;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-perspective: 1000px;
@@ -2242,10 +2242,7 @@ a, button, .logo {
 }
 .ecosystem-list .ecosystem-list__back, .ecosystem-list .ecosystem-list__front {
   border-radius: 24px;
-  border: 1px solid #000000;
   background-size: cover;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
   background-position: center;
   -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
   transition: -webkit-transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
@@ -2254,7 +2251,7 @@ a, button, .logo {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   text-align: center;
-  min-height: 264px;
+  min-height: 275px;
 }
 @media screen and (max-width: 625px) {
   .ecosystem-list .ecosystem-list__back, .ecosystem-list .ecosystem-list__front {
@@ -2262,6 +2259,7 @@ a, button, .logo {
   }
 }
 .ecosystem-list__back {
+  border: 1px solid #000000;
   position: absolute;
   top: 0;
   left: 0;
@@ -2286,6 +2284,7 @@ a, button, .logo {
 }
 .ecosystem-list__inner {
   padding: 40px;
+  height: 100%;
   -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
   transform: translateY(-50%) translateZ(60px) scale(0.94);
   top: 50%;
@@ -2346,8 +2345,8 @@ a, button, .logo {
   position: absolute;
   top: 20px;
   right: 25px;
-  width: 32px;
-  height: 32px;
+  width: 20px;
+  height: 20px;
 }
 @media screen and (max-width: 625px) {
   .ecosystem-list__indicator {
@@ -3621,12 +3620,8 @@ a, button, .logo {
   }
 }
 .roadmap__wrapper {
-  height: 540px;
-}
-@media screen and (max-width: 1110px) {
-  .roadmap__wrapper {
-    padding-bottom: 64px;
-  }
+  height: 830px;
+  padding-bottom: 64px;
 }
 .roadmap__pagination__container.swiper-pagination .swiper-pagination-bullet {
   opacity: unset;
@@ -3658,11 +3653,6 @@ a, button, .logo {
 }
 .roadmap-list__item.complete {
   background-color: #FBA95D;
-}
-@media screen and (max-width: 850px) {
-  .roadmap-list__item.complete.swiper-slide-active {
-    background-color: #fff;
-  }
 }
 .roadmap-list__item.ongoing {
   background-color: #61DE9B;
@@ -3697,6 +3687,9 @@ a, button, .logo {
   margin-bottom: 7px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+.roadmap-list h3.roadmap-list__title span {
+  display: block;
 }
 @media screen and (max-width: 530px) {
   .roadmap-list h3.roadmap-list__title {
@@ -4759,6 +4752,10 @@ a, button, .logo {
             align-items: center;
     width: 148px;
   }
+}
+.footer .footer__btn {
+  position: relative;
+  z-index: 2;
 }
 @media screen and (max-width: 900px) {
   .footer .footer__btn {
