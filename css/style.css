@@ -731,12 +731,28 @@ a, button, .logo {
   border-color: transparent;
   color: #fff;
   background-color: transparent;
-  background: -webkit-gradient(linear, left top, right top, from(#03a9f4), color-stop(#f441a5), color-stop(#ffeb3b), to(#03a9f4));
-  background: linear-gradient(to right, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-  background-size: 400%;
   position: relative;
   -webkit-animation: gradient-move 8s linear Infinite;
           animation: gradient-move 8s linear Infinite;
+  -webkit-transition: overflow 0.3s ease 0.3s;
+  transition: overflow 0.3s ease 0.3s;
+}
+.pitch::after {
+  content: "";
+  background: -webkit-gradient(linear, left top, right top, from(#03a9f4), color-stop(#f441a5), color-stop(#ffeb3b), to(#03a9f4));
+  background: linear-gradient(to right, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  border-radius: 40px;
+  background-size: 400%;
+  position: absolute;
+  -webkit-animation: gradient-move 8s linear Infinite;
+          animation: gradient-move 8s linear Infinite;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .pitch:before {
   content: "";
@@ -759,15 +775,18 @@ a, button, .logo {
           animation: gradient-move 8s linear Infinite;
 }
 .pitch:hover {
+  overflow: hidden;
   background-image: none;
-  background-color: #fff;
-  color: #8556EE;
-  border-color: #8556EE;
+  color: #fff;
 }
 .pitch:hover:before {
   opacity: 0;
   -webkit-filter: blur(20px);
           filter: blur(20px);
+}
+.pitch:hover::after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 @media screen and (max-width: 1020px) {
   .pitch {

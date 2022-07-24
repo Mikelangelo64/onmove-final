@@ -670,11 +670,30 @@ a, button, .logo{
     color: #fff;
     background-color: transparent;
    // background-image: linear-gradient(94.85deg, #8857ED 11.35%, #B868DE 99.19%);
-    background: linear-gradient(to right, #03a9f4,#f441a5,#ffeb3b,#03a9f4);
-    background-size:400%;
+    // background: linear-gradient(to right, #03a9f4,#f441a5,#ffeb3b,#03a9f4);
+    // background-size:400%;
     position: relative;
     animation:  gradient-move  8s linear Infinite;
     // filter: blur(20px);
+
+    transition: overflow .3s ease .3s;
+
+    &::after{
+        content:"";
+        background: linear-gradient(to   right,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+        //background-image: linear-gradient(94.85deg, #8857ED 11.35%, #B868DE 99.19%);
+        border-radius: 40px;
+        background-size:400%;
+       position: absolute;
+       animation:  gradient-move  8s linear Infinite;
+       z-index: -1;
+       top: 0;
+       left: 0;
+       height: 100%;
+       width: 100%;
+       transition: all .3s ease;
+
+    }
 
     &:before{
         content:"";
@@ -697,14 +716,20 @@ a, button, .logo{
      }
 
     &:hover{
+        overflow: hidden;
         background-image: none;
-        background-color: #fff;
-        color: #8556EE;
-        border-color: #8556EE;
+        // background-color: #fff;
+        color: #fff;
+        //border-color: #8556EE;
 
         &:before{
             opacity: 0;
             filter: blur(20px);
+
+            
+        }
+        &::after{
+            transform:  rotate(180deg);
         }
     }
 
