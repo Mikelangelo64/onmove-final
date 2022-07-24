@@ -287,7 +287,7 @@ h2.title {
   margin-bottom: 64px;
 }
 body, html {
-  cursor: url(../assets/img/label-cursor-white.svg), auto;
+  cursor: url(../assets/img/cursor.svg), auto;
 }
 
 body {
@@ -326,11 +326,11 @@ section._movable {
 }
 
 h1, h2, h3, h4, h5, p {
-  cursor: url(../assets/img/label-cursor-white.svg), auto;
+  cursor: url(../assets/img/cursor.svg), auto;
 }
 
 a, button, .logo {
-  cursor: url(../assets/img/label-cursor-white.svg), auto;
+  cursor: url(../assets/img/cursor-big.svg), auto;
 }
 
 ._container {
@@ -2170,6 +2170,7 @@ a, button, .logo {
      object-fit: cover;
 }
 .ecosystem-list__card__container {
+  cursor: url(../assets/img/cursor-big.svg), auto;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(33.3333% - 32px);
           flex: 0 0 calc(33.3333% - 32px);
@@ -2400,7 +2401,7 @@ a, button, .logo {
 }
 
 .possibility {
-  cursor: url(../assets/img/label-cursor-white.svg), auto;
+  cursor: url(../assets/img/cursor.svg), auto;
   background-color: #25252F;
   position: relative;
   z-index: 1;
@@ -2856,6 +2857,7 @@ a, button, .logo {
   margin-bottom: 25px;
 }
 .possibility-customize__pagination__container.swiper-pagination {
+  cursor: url(../assets/img/cursor-big.svg), auto;
   position: relative;
   z-index: 2;
   display: -webkit-box;
@@ -2876,7 +2878,7 @@ a, button, .logo {
   }
 }
 .possibility-customize__pagination__container.swiper-pagination .swiper-pagination-bullet {
-  cursor: url(../assets/img/label-cursor-white.svg), auto;
+  cursor: url(../assets/img/cursor-big.svg), auto;
   padding: 0 10px;
   border-right: 1px solid #F091FF;
   border-radius: 0px;
@@ -3003,6 +3005,7 @@ a, button, .logo {
           backdrop-filter: blur(2px);
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
+  cursor: url(../assets/img/cursor-big.svg), auto;
 }
 .possibility-customize__btns__container .swiper-button-next svg, .possibility-customize__btns__container .swiper-button-prev svg {
   width: 14px;
@@ -3041,6 +3044,9 @@ a, button, .logo {
 
 .customize-swiper {
   z-index: 2;
+}
+.customize-swiper .swiper-slide {
+  cursor: url(../assets/img/cursor-big.svg), auto;
 }
 .customize-swiper .swiper-slide .swiper-slide__content {
   max-width: 194px;
@@ -3122,6 +3128,7 @@ a, button, .logo {
   }
 }
 .showcase-head-swiper .swiper-slide {
+  cursor: url(../assets/img/cursor-big.svg), auto;
   max-width: 290px;
 }
 @media screen and (max-width: 620px) {
@@ -3143,6 +3150,7 @@ a, button, .logo {
   }
 }
 .showcase-bottom-swiper .swiper-slide {
+  cursor: url(../assets/img/cursor-big.svg), auto;
   max-width: 290px;
 }
 @media screen and (max-width: 620px) {
@@ -3471,6 +3479,7 @@ a, button, .logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: url(../assets/img/cursor-big.svg), auto;
 }
 @media screen and (max-width: 1200px) {
   .tokenomics-statistic__item {
@@ -3650,6 +3659,9 @@ a, button, .logo {
   height: 600px;
   padding-bottom: 64px;
 }
+.roadmap__pagination__container.swiper-pagination {
+  cursor: url(../assets/img/cursor-big.svg), auto;
+}
 .roadmap__pagination__container.swiper-pagination .swiper-pagination-bullet {
   opacity: unset;
   border: 1px solid #333347;
@@ -3664,6 +3676,7 @@ a, button, .logo {
   background-color: #25252F;
 }
 .roadmap-list__item {
+  cursor: url(../assets/img/cursor-big.svg), auto;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   background-color: #FFFFFF;
@@ -3705,8 +3718,8 @@ a, button, .logo {
     background-color: #fff;
   }
 }
-.roadmap-list__item.complete:hover, .roadmap-list__item.ongoing:hover, .roadmap-list__item.upcoming:hover, .roadmap-list__item.future:hover {
-  background-color: #fff;
+.roadmap-list__item.complete:hover h3.roadmap-list__title, .roadmap-list__item.ongoing:hover h3.roadmap-list__title, .roadmap-list__item.upcoming:hover h3.roadmap-list__title, .roadmap-list__item.future:hover h3.roadmap-list__title {
+  color: #865CFC;
 }
 .roadmap-list h3.roadmap-list__title {
   color: #000;
@@ -3819,7 +3832,7 @@ a, button, .logo {
 }
 
 .team {
-  cursor: url(../assets/img/label-cursor-white.svg), auto;
+  cursor: url(../assets/img/cursor.svg), auto;
   background-color: #25252F;
   position: relative;
   overflow: hidden;
@@ -4269,7 +4282,7 @@ a, button, .logo {
           justify-content: center;
 }
 .supporters-swiper__pagination__container.swiper-pagination .swiper-pagination-bullet {
-  cursor: url(../assets/img/label-cursor-white.svg), auto;
+  cursor: url(../assets/img/cursor-big.svg), auto;
   opacity: unset;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -4630,7 +4643,7 @@ a, button, .logo {
 }
 
 .footer {
-  cursor: url(../assets/img/label-cursor-white.svg), auto;
+  cursor: url(../assets/img/cursor.svg), auto;
   padding: 56px 0 37px;
   background-color: #25252F;
   position: relative;
