@@ -734,10 +734,19 @@ a, button, .logo {
   position: relative;
   -webkit-animation: gradient-move 8s linear Infinite;
           animation: gradient-move 8s linear Infinite;
-  -webkit-transition: overflow 0.3s ease 0.3s;
-  transition: overflow 0.3s ease 0.3s;
+  -webkit-transition: overflow 0.3s ease 1s;
+  transition: overflow 0.3s ease 1s;
 }
-.pitch::after {
+.pitch span {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.pitch span::after {
   content: "";
   background: -webkit-gradient(linear, left top, right top, from(#03a9f4), color-stop(#f441a5), color-stop(#ffeb3b), to(#03a9f4));
   background: linear-gradient(to right, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
@@ -775,7 +784,6 @@ a, button, .logo {
           animation: gradient-move 8s linear Infinite;
 }
 .pitch:hover {
-  overflow: hidden;
   background-image: none;
   color: #fff;
 }
@@ -784,7 +792,7 @@ a, button, .logo {
   -webkit-filter: blur(20px);
           filter: blur(20px);
 }
-.pitch:hover::after {
+.pitch:hover span::after {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
