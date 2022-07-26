@@ -91,6 +91,7 @@ $(document).ready(function () {
     if(isSafari) {
         $('.pitch').addClass('pitch-safari')
         $('.main').addClass('main-safari')
+        $('.zorelit').addClass('zorelit-safari')
     }
 
     //console.log(isSafari);

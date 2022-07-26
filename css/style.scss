@@ -5110,6 +5110,25 @@ a, button, .logo{
                 visibility: hidden;
             }
         }
+
+        .zorelit__link__safari{
+            display: none;
+        }
+
+        &.zorelit-safari {
+            width: 32px;
+            .zorelit__link__safari{
+                display: inline-block;
+
+                svg{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            .zorelit__link{
+                display: none;
+            }
+        }
         
     }
 
