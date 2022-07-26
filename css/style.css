@@ -1249,7 +1249,7 @@ a, button, .logo {
 }
 .main .main__square__left__1 {
   top: 0%;
-  left: -2%;
+  left: 0;
   width: 70px;
 }
 @media screen and (max-width: 894px) {
@@ -1295,6 +1295,12 @@ a, button, .logo {
 @media screen and (max-width: 905px) {
   .main__container {
     padding: unset;
+  }
+}
+@media screen and (max-width: 894px) {
+  .main__container {
+    overflow-x: clip;
+    overflow-y: visible;
   }
 }
 .main__grid {
