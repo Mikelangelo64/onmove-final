@@ -1187,6 +1187,11 @@ a, button, .logo {
   -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
+@media screen and (max-width: 894px) {
+  .main.main-safari {
+    overflow: hidden;
+  }
+}
 @media screen and (max-width: 1130px) {
   .main {
     padding-bottom: 120px;

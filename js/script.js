@@ -90,6 +90,7 @@ $(document).ready(function () {
 
     if(isSafari) {
         $('.pitch').addClass('pitch-safari')
+        $('.main').addClass('main-safari')
     }
 
     //console.log(isSafari);

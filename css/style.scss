@@ -1158,6 +1158,12 @@ a, button, .logo{
     margin-bottom: -60px;
     transition: all .1s linear;
 
+    &.main-safari {
+        @media screen and (max-width: 894px) {
+            overflow: hidden;
+        }
+    }
+
     @media screen and (max-width: 1130px) {
         padding-bottom: 120px;
         background-size: 100% 100%;
