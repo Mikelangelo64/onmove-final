@@ -3393,8 +3393,9 @@ a, button, .logo{
         }
     }
 
-    //.tokenomics__container
+    //.tokenomics__container 
     &__container{
+        overflow: hidden;
         @media screen and (max-width: 1070px) {
             max-width: unset;
         }
