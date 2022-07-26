@@ -3888,7 +3888,7 @@ a, button, .logo{
         transition: all .3s ease;
         
         &.complete{
-            background-color: #FBA95D;
+            background-color: rgba(251, 169, 93, 0.67);
             @media screen and (max-width: 850px) {
                 &.swiper-slide-active{
                     //background-color: #fff;
@@ -3897,7 +3897,7 @@ a, button, .logo{
             
         }
         &.ongoing{
-            background-color: #61DE9B;
+            background-color: rgba(97, 222, 155, 0.67);
             @media screen and (max-width: 850px) {
                 &.swiper-slide-active{
                     // background-color: #fff;
@@ -3905,7 +3905,7 @@ a, button, .logo{
             }
         }
         &.upcoming{
-            background-color: #D2C3FF;
+            background-color: rgba(210, 195, 255, 0.67);
             @media screen and (max-width: 850px) {
                 &.swiper-slide-active{
                     // background-color: #fff;
@@ -3913,7 +3913,12 @@ a, button, .logo{
             }
         }
         &.future{
-            background-color: #6C9EFF;
+            background-color: rgba(108, 157, 255, 0.67);
+
+            &:last-child{
+                background-color: rgba(239, 145, 255, 0.67);
+            }
+
             @media screen and (max-width: 850px) {
                 &.swiper-slide-active{
                     // background-color: #fff;
@@ -3927,6 +3932,10 @@ a, button, .logo{
            //border: 3px solid #000000;
            h3.roadmap-list__title {
             color: #865CFC;
+           }
+           .roadmap-list__subtitle {
+            color: #F1747C;
+            transition: all .3s ease;
            }
         }
 
@@ -4030,7 +4039,7 @@ a, button, .logo{
         font-size: 20px;
         line-height: 24px;
         font-family: "Manrope", sans-serif;
-        font-weight: 600;
+        font-weight: 800;
         margin-bottom: 15px;
     }
 

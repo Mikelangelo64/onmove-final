@@ -3651,19 +3651,27 @@ a, button, .logo {
           flex-direction: column;
 }
 .roadmap-list__item.complete {
-  background-color: #FBA95D;
+  background-color: rgba(251, 169, 93, 0.67);
 }
 .roadmap-list__item.ongoing {
-  background-color: #61DE9B;
+  background-color: rgba(97, 222, 155, 0.67);
 }
 .roadmap-list__item.upcoming {
-  background-color: #D2C3FF;
+  background-color: rgba(210, 195, 255, 0.67);
 }
 .roadmap-list__item.future {
-  background-color: #6C9EFF;
+  background-color: rgba(108, 157, 255, 0.67);
+}
+.roadmap-list__item.future:last-child {
+  background-color: rgba(239, 145, 255, 0.67);
 }
 .roadmap-list__item.complete:hover h3.roadmap-list__title, .roadmap-list__item.ongoing:hover h3.roadmap-list__title, .roadmap-list__item.upcoming:hover h3.roadmap-list__title, .roadmap-list__item.future:hover h3.roadmap-list__title {
   color: #865CFC;
+}
+.roadmap-list__item.complete:hover .roadmap-list__subtitle, .roadmap-list__item.ongoing:hover .roadmap-list__subtitle, .roadmap-list__item.upcoming:hover .roadmap-list__subtitle, .roadmap-list__item.future:hover .roadmap-list__subtitle {
+  color: #F1747C;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 .roadmap-list h3.roadmap-list__title {
   color: #000;
@@ -3702,7 +3710,7 @@ a, button, .logo {
   font-size: 20px;
   line-height: 24px;
   font-family: "Manrope", sans-serif;
-  font-weight: 600;
+  font-weight: 800;
   margin-bottom: 15px;
 }
 .roadmap-list__watermark {
