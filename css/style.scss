@@ -5120,24 +5120,24 @@ a, button, .logo{
             }
         }
 
-        .zorelit__link__safari{
-            display: none;
-        }
+        // .zorelit__link__safari{
+        //     display: none;
+        // }
 
-        &.zorelit-safari {
-            width: 32px;
-            .zorelit__link__safari{
-                display: inline-block;
+        // &.zorelit-safari {
+        //     width: 32px;
+        //     .zorelit__link__safari{
+        //         display: inline-block;
 
-                svg{
-                    width: 100%;
-                    height: auto;
-                }
-            }
-            .zorelit__link{
-                display: none;
-            }
-        }
+        //         svg{
+        //             width: 100%;
+        //             height: auto;
+        //         }
+        //     }
+        //     .zorelit__link{
+        //         display: none;
+        //     }
+        // }
         
     }
 
@@ -5350,6 +5350,8 @@ a, button, .logo{
         max-width: 425px;
         width: 100%;
         justify-content: space-between;
+        display: -webkit-flex;
+        -webkit-justify-content: space-between;
 
         margin-bottom: 30px;
 

@@ -4659,22 +4659,6 @@ a, button, .logo {
     visibility: hidden;
   }
 }
-.footer .zorelit .zorelit__link__safari {
-  display: none;
-}
-.footer .zorelit.zorelit-safari {
-  width: 32px;
-}
-.footer .zorelit.zorelit-safari .zorelit__link__safari {
-  display: inline-block;
-}
-.footer .zorelit.zorelit-safari .zorelit__link__safari svg {
-  width: 100%;
-  height: auto;
-}
-.footer .zorelit.zorelit-safari .zorelit__link {
-  display: none;
-}
 .footer .footer__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4881,6 +4865,8 @@ a, button, .logo {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  display: -webkit-flex;
+  -webkit-justify-content: space-between;
   margin-bottom: 30px;
 }
 @media screen and (max-width: 900px) {
