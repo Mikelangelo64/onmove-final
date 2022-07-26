@@ -4801,6 +4801,7 @@ a, button, .logo {
             justify-content: unset;
   }
   .footer-main .footer-main__list li {
+    margin-right: 0;
     margin-bottom: 13px;
   }
   .footer-main .footer-main__list li:last-child {
