@@ -764,6 +764,9 @@ a, button, .logo {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+.pitch.pitch-safari:before {
+  display: none;
+}
 .pitch:before {
   content: "";
   background: -webkit-gradient(linear, left top, right top, from(#03a9f4), color-stop(#f441a5), color-stop(#ffeb3b), to(#03a9f4));

@@ -86,6 +86,14 @@ $(document).ready(function () {
         $('body').addClass('_pc')
     }
 
+    let isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+    if(isSafari) {
+        $('.pitch').addClass('pitch-safari')
+    }
+
+    //console.log(isSafari);
+
     //animateOn
     wow = new WOW({
         boxClass:     'wow',   

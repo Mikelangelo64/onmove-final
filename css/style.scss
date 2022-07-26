@@ -685,6 +685,7 @@ a, button, .logo{
         position: absolute;
         top: 0;
         left: 0;
+
         &::after{
             content:"";
             background: linear-gradient(to   right,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
@@ -703,7 +704,11 @@ a, button, .logo{
         }
     }
     
-
+    &.pitch-safari{
+        &:before{
+            display: none;
+        }
+    }
     &:before{
         content:"";
         background: linear-gradient(to   right,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
