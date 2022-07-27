@@ -1,13 +1,25 @@
 const colors = [
-    "#FFFDCC",
-    "#D0EDFF",
-    "#25252F",
-    "#FEC5CC",
-    "#8CFFB3",
-    "#CCCDFD",
-    "#7676F6",
-    "#9E5FE6"
+    "#F1747C",
+    "#8674B8",
+    "#61DE9B",
+    "#FBA95D",
+    "#6C9EFF",
+    "#EF91FF",
+    "#A169E7",
+    "#18F2FE"
 ];
+
+function suppressSelection(chart, params) {
+	chart.setOption({ animation: false });
+
+	// Re-select what the user unselected
+	chart.dispatchAction({
+		type: 'legendSelect',
+		name: params.name
+	});
+
+	chart.setOption({ animation: true });
+}
 
 let isMobile = innerWidth < 620;
 
@@ -280,6 +292,42 @@ const createLine = () => {
 
 	var option;
 
+	const lineLegend = isMobile ? [{
+		selectedMode: false,
+		data: [
+			"SEED ROUND",
+			"ECOSYSTEM & TREASURY",
+			"MARKETING",
+			"PUBLIC SALE (IDO/IEO)",
+		],
+		bottom: "5px",
+		width: "50%",
+		left: 0,
+	}, {
+		selectedMode: false,
+		data: [
+			"PRIVATE SALE",
+			"ADVISORS & AMBASADORS& CONSULTING",
+			"FOUNDERS & TEAM",
+			"USERS REWARDS",
+		],
+		bottom: "5px",
+		left: "50%",
+		width: "50%"
+	}] : [{
+		data: [
+			"SEED ROUND",
+			"PRIVATE SALE",
+			"ADVISORS & AMBASADORS& CONSULTING",
+			"MARKETING",
+			"FOUNDERS & TEAM",
+			"PUBLIC SALE (IDO/IEO)",
+			"ECOSYSTEM & TREASURY",
+			"USERS REWARDS",
+		],
+		bottom: "5px"
+	}]
+
 	option = {
 		tooltip: {
 			trigger: "axis",
@@ -297,19 +345,7 @@ const createLine = () => {
 			}
 		},
 		color: colors,
-		legend: {
-			data: [
-				"SEED ROUND",
-				"PRIVATE SALE",
-				"PUBLIC SALE (IDO/IEO)",
-				"FOUNDERS & TEAM",
-				"ADVISORS & AMBASADORS& CONSULTING",
-				"MARKETING",
-				"ECOSYSTEM & TREASURY",
-				"USERS REWARDS"
-			],
-			bottom: "5px"
-		},
+		legend: lineLegend,
 		grid: {
 			left: "15px",
 			right: "15px",
@@ -350,9 +386,9 @@ const createLine = () => {
 					"26",
 					"27"
 				],
-				axisLabel: {
-					formatter: "{value} Month"
-				},
+				// axisLabel: {
+				// 	formatter: "{value} Month"
+				// },
 				axisPointer: {
 					label: {
 						formatter: "{value} Month"
@@ -388,6 +424,10 @@ const createLine = () => {
 				smooth: true,
 				stack: "Total",
 				areaStyle: {},
+				emphasis: {
+					focus: 'series'
+				},
+				showSymbol: false,
 				data: dataSet[0]
 			},
 			{
@@ -396,23 +436,11 @@ const createLine = () => {
 				smooth: true,
 				stack: "Total",
 				areaStyle: {},
+				emphasis: {
+					focus: 'series'
+				},
+				showSymbol: false,
 				data: dataSet[1]
-			},
-			{
-				name: "PUBLIC SALE (IDO/IEO)",
-				type: "line",
-				smooth: true,
-				stack: "Total",
-				areaStyle: {},
-				data: dataSet[2]
-			},
-			{
-				name: "FOUNDERS & TEAM",
-				type: "line",
-				smooth: true,
-				stack: "Total",
-				areaStyle: {},
-				data: dataSet[3]
 			},
 			{
 				name: "ADVISORS & AMBASADORS& CONSULTING",
@@ -420,6 +448,10 @@ const createLine = () => {
 				smooth: true,
 				stack: "Total",
 				areaStyle: {},
+				emphasis: {
+					focus: 'series'
+				},
+				showSymbol: false,
 				data: dataSet[4]
 			},
 			{
@@ -428,7 +460,35 @@ const createLine = () => {
 				smooth: true,
 				stack: "Total",
 				areaStyle: {},
+				emphasis: {
+					focus: 'series'
+				},
+				showSymbol: false,
 				data: dataSet[5]
+			},
+			{
+				name: "FOUNDERS & TEAM",
+				type: "line",
+				smooth: true,
+				stack: "Total",
+				areaStyle: {},
+				emphasis: {
+					focus: 'series'
+				},
+				showSymbol: false,
+				data: dataSet[3]
+			},
+			{
+				name: "PUBLIC SALE (IDO/IEO)",
+				type: "line",
+				smooth: true,
+				stack: "Total",
+				areaStyle: {},
+				emphasis: {
+					focus: 'series'
+				},
+				showSymbol: false,
+				data: dataSet[2]
 			},
 			{
 				name: "ECOSYSTEM & TREASURY",
@@ -436,6 +496,10 @@ const createLine = () => {
 				smooth: true,
 				stack: "Total",
 				areaStyle: {},
+				emphasis: {
+					focus: 'series'
+				},
+				showSymbol: false,
 				data: dataSet[6]
 			},
 			{
@@ -444,6 +508,10 @@ const createLine = () => {
 				smooth: true,
 				stack: "Total",
 				areaStyle: {},
+				emphasis: {
+					focus: 'series'
+				},
+				showSymbol: false,
 				data: dataSet[7]
 			}
 		]
@@ -452,6 +520,25 @@ const createLine = () => {
 	if (option && typeof option === "object") {
 		lineChart.setOption(option);
 	}
+
+	lineChart.on('legendselectchanged', function(params) {
+		lineChart.setOption({ animation: false });
+		lineChart.setOption({
+			legend: [{
+				selected: {
+					'ADVISORS & AMBASADORS& CONSULTING': true,
+					'ECOSYSTEM & TREASURY': true,
+					'FOUNDERS & TEAM': true,
+					'MARKETING': true,
+					'PRIVATE SALE': true,
+					'PUBLIC SALE (IDO/IEO)': true,
+					'SEED ROUND': true,
+					'USERS REWARDS': true
+				}
+			}]
+		})
+		lineChart.setOption({ animation: true });
+	});
 
 	window.addEventListener("resize", lineChart.resize);
 };
@@ -465,34 +552,19 @@ const createPie = () => {
 	var app = {};
 
 	const data = [
-		{ value: 2.00, name: "SEED ROUND" },
-		{ value: 4.00, name: "PRIVATE SALE" },
-		{ value: 5, name: "ADVISORS & AMBASADORS& CONSULTING" },
-		{ value: 8, name: "MARKETING" },
-		{ value: 9, name: "FOUNDERS & TEAM" },
-		{ value: 11, name: "PUBLIC SALE (IDO/IEO)" },
+		{ value: 39, name: "USERS REWARDS" },
 		{ value: 22, name: "ECOSYSTEM & TREASURY" },
-		{ value: 39, name: "USERS REWARDS" }
-	];
-	
-	const colors = [
-		"#FFFDCC",
-		"#D0EDFF",
-		"#25252F",
-		"#FEC5CC",
-		"#8CFFB3",
-		"#CCCDFD",
-		"#7676F6",
-		"#9E5FE6"
+		{ value: 11, name: "PUBLIC SALE (IDO/IEO)" },
+		{ value: 9, name: "FOUNDERS & TEAM" },
+		{ value: 8, name: "MARKETING" },
+		{ value: 5, name: "ADVISORS & AMBASADORS& CONSULTING" },
+		{ value: 4.00, name: "PRIVATE SALE" },
+		{ value: 2.00, name: "SEED ROUND" }
 	];
 	
 	var option;
 	
 	option = {
-		dataZoom: {
-			moveOnMouseMove: !1,
-			show: !1
-		},
 		tooltip: {
 			trigger: "item",
 			confine: true,
@@ -504,6 +576,17 @@ const createPie = () => {
 			}
 		},
 		legend: {
+			data: [
+				"SEED ROUND",
+				"PRIVATE SALE",
+				"ADVISORS & AMBASADORS& CONSULTING",
+				"MARKETING",
+				"FOUNDERS & TEAM",
+				"PUBLIC SALE (IDO/IEO)",
+				"ECOSYSTEM & TREASURY",
+				"USERS REWARDS",
+			],
+			icon: 'circle',
 			orient: "vertical",
 			right: 20,
 			top: "center",
@@ -518,9 +601,12 @@ const createPie = () => {
 				const value = data.find(el => el.name === name).value;
 				const formatted = value < 10 ? ` ${value}%` : `${value}%`;
 				return `${formatted} ${name}`
-			}
+			},
+			emphasis: {
+        selector: false
+      }
 		},
-		color: colors,
+		color: colors.reverse(),
 		series: [
 			{
 				type: "pie",
@@ -549,9 +635,13 @@ const createPie = () => {
 	if (option && typeof option === "object") {
 		pieChart.setOption(option);
 	}
+	pieChart.on('legendselectchanged', function(params) {
+		suppressSelection(pieChart, params);  
+	});
 	
 	window.addEventListener("resize", pieChart.resize);
 	
+	window.pie = pieChart;
 }
 
 createLine();
