@@ -287,7 +287,7 @@ h2.title {
   margin-bottom: 64px;
 }
 body, html {
-  cursor: url(../assets/img/cursor.svg), auto;
+  cursor: default;
 }
 
 body {
@@ -326,11 +326,11 @@ section._movable {
 }
 
 h1, h2, h3, h4, h5, p {
-  cursor: url(../assets/img/cursor.svg), auto;
+  cursor: default;
 }
 
 a, button, .logo {
-  cursor: url(../assets/img/cursor-big.svg), auto;
+  cursor: pointer;
 }
 
 ._container {
@@ -2185,7 +2185,7 @@ a, button, .logo {
      object-fit: cover;
 }
 .ecosystem-list__card__container {
-  cursor: url(../assets/img/cursor-big.svg), auto;
+  cursor: pointer;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(33.3333% - 32px);
           flex: 0 0 calc(33.3333% - 32px);
@@ -2423,7 +2423,7 @@ a, button, .logo {
 }
 
 .possibility {
-  cursor: url(../assets/img/cursor.svg), auto;
+  cursor: default;
   background-color: #25252F;
   position: relative;
   z-index: 1;
@@ -2879,7 +2879,7 @@ a, button, .logo {
   margin-bottom: 25px;
 }
 .possibility-customize__pagination__container.swiper-pagination {
-  cursor: url(../assets/img/cursor-big.svg), auto;
+  cursor: pointer;
   position: relative;
   z-index: 2;
   display: -webkit-box;
@@ -2903,7 +2903,7 @@ a, button, .logo {
   }
 }
 .possibility-customize__pagination__container.swiper-pagination .swiper-pagination-bullet {
-  cursor: url(../assets/img/cursor-big.svg), auto;
+  cursor: pointer;
   text-transform: uppercase;
   padding: 0 10px;
   border-right: 1px solid #F091FF;
@@ -3031,7 +3031,7 @@ a, button, .logo {
           backdrop-filter: blur(2px);
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
-  cursor: url(../assets/img/cursor-big.svg), auto;
+  cursor: pointer;
 }
 .possibility-customize__btns__container .swiper-button-next svg, .possibility-customize__btns__container .swiper-button-prev svg {
   width: 14px;
@@ -3070,9 +3070,6 @@ a, button, .logo {
 
 .customize-swiper {
   z-index: 2;
-}
-.customize-swiper .swiper-slide {
-  cursor: url(../assets/img/cursor-big.svg), auto;
 }
 .customize-swiper .swiper-slide .swiper-slide__content {
   max-width: 194px;
@@ -3154,7 +3151,6 @@ a, button, .logo {
   }
 }
 .showcase-head-swiper .swiper-slide {
-  cursor: url(../assets/img/cursor-big.svg), auto;
   max-width: 290px;
 }
 @media screen and (max-width: 620px) {
@@ -3176,7 +3172,6 @@ a, button, .logo {
   }
 }
 .showcase-bottom-swiper .swiper-slide {
-  cursor: url(../assets/img/cursor-big.svg), auto;
   max-width: 290px;
 }
 @media screen and (max-width: 620px) {
@@ -3439,7 +3434,7 @@ a, button, .logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  cursor: url(../assets/img/cursor-big.svg), auto;
+  cursor: pointer;
 }
 @media screen and (max-width: 1200px) {
   .tokenomics-statistic__item {
@@ -3616,11 +3611,11 @@ a, button, .logo {
   }
 }
 .roadmap__wrapper {
-  height: 600px;
+  height: 475px;
   padding-bottom: 64px;
 }
 .roadmap__pagination__container.swiper-pagination {
-  cursor: url(../assets/img/cursor-big.svg), auto;
+  cursor: pointer;
 }
 .roadmap__pagination__container.swiper-pagination .swiper-pagination-bullet {
   opacity: unset;
@@ -3636,7 +3631,8 @@ a, button, .logo {
   background-color: #25252F;
 }
 .roadmap-list__item {
-  cursor: url(../assets/img/cursor-big.svg), auto;
+  cursor: -webkit-grab;
+  cursor: grab;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   border: 1px solid #000000;
@@ -3784,7 +3780,7 @@ a, button, .logo {
 }
 
 .team {
-  cursor: url(../assets/img/cursor.svg), auto;
+  cursor: default;
   background-color: #25252F;
   position: relative;
   overflow: hidden;
@@ -4234,7 +4230,7 @@ a, button, .logo {
           justify-content: center;
 }
 .supporters-swiper__pagination__container.swiper-pagination .swiper-pagination-bullet {
-  cursor: url(../assets/img/cursor-big.svg), auto;
+  cursor: pointer;
   opacity: unset;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -4595,7 +4591,7 @@ a, button, .logo {
 }
 
 .footer {
-  cursor: url(../assets/img/cursor.svg), auto;
+  cursor: default;
   padding: 56px 0 37px;
   background-color: #25252F;
   position: relative;

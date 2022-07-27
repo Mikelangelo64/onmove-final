@@ -499,7 +499,7 @@ $(document).ready(function () {
     let customSwiper = new Swiper('.customize-swiper.swiper', {
 
         slidesPerView: 1,
-
+        grabCursor: true,
         allowTouchMove: true,
 
         spaceBetween: 80,
@@ -524,6 +524,7 @@ $(document).ready(function () {
 
     let headSwiper = new Swiper('.showcase-head-swiper.swiper',{
         loop: true,
+        grabCursor: true,
         //autoHeight: true,
         freeMode: true,
         spaceBetween: 30,
@@ -540,7 +541,7 @@ $(document).ready(function () {
     })
     let bottomSwiper = new Swiper('.showcase-bottom-swiper.swiper',{
         loop: true,
-        
+        grabCursor: true,
         //autoHeight: true,
         freeMode: true,
         spaceBetween: 30,
@@ -566,6 +567,7 @@ $(document).ready(function () {
         spaceBetween: 30,
         autoHeight: true,
         loop: false,
+        grabCursor: true,
 
         breakpoints: {
             650:{

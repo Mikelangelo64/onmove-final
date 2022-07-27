@@ -30,8 +30,8 @@ $black: #25252F;
 $gradient: linear-gradient(240.65deg, #8CFFB3 -14.63%, #7676F7 104.98%);
 
 //CURSORS-----------------------------------------------
-$cursor-white: url(../assets/img/cursor.svg), auto;
-$cursor-big: url(../assets/img/cursor-big.svg), auto;
+$cursor-white: default;
+$cursor-big: pointer;
 
 //animations
 $ease: cubic-bezier(0.6, 0, 0.2, 1);
@@ -3254,7 +3254,7 @@ a, button, .logo{
     .swiper-wrapper {
     }
     .swiper-slide {
-        cursor: $cursor-big;
+        //cursor: $cursor-big;
         .swiper-slide__content {
             max-width: 194px;
             margin: 0 auto;
@@ -3354,7 +3354,7 @@ a, button, .logo{
         }
     }
     .swiper-slide {
-        cursor: $cursor-big;
+        //cursor: grab;
         max-width: 290px;
         @media screen and (max-width: 620px) {
             max-width: 200px;
@@ -3371,7 +3371,7 @@ a, button, .logo{
         }
     }
     .swiper-slide {
-        cursor: $cursor-big;
+        //cursor: $cursor-big;
         max-width: 290px;
         @media screen and (max-width: 620px) {
             max-width: 200px;
@@ -3830,7 +3830,7 @@ a, button, .logo{
         
         
         //width: 296px;
-        height: 600px;
+        height: 475px;
         
         
        // @media screen and (max-width: 1110px) {
@@ -3884,7 +3884,7 @@ a, button, .logo{
     
     //.roadmap-list__item 
     &__item {
-        cursor: $cursor-big;
+        cursor: grab;
         transition: all .3s ease;
         
         &.complete{
