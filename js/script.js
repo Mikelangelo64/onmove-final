@@ -492,6 +492,27 @@ $(document).ready(function () {
         })
     });
 
+    //roadmap progressbar
+
+    let setProgress = function(entries, observer) {
+        /* Content excerpted, show below */
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                console.log(entry.target);
+                entry.target.classList.add('running')
+
+                observer.unobserve(entry.target)
+            }
+        })
+    };
+
+    let observerProgress = new IntersectionObserver(setProgress, {})
+    
+    let target = document.querySelector('.inner');
+    
+    observerProgress.observe(target)
+
+
     //swipers
     //swiper customize
     let customCategories = ['Admirer', 'Addict', 'Diehard', 'Enthusiast']
@@ -978,11 +999,11 @@ $(document).ready(function () {
 
             breakpoints: {
                 850:{
-                    slidesPerView: 3,
+                    slidesPerView: 2,
 
                 },
-                1110:{
-                    slidesPerView: 4,
+                1210:{
+                    slidesPerView: 3,
 
                 },
             },
