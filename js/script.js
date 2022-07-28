@@ -997,12 +997,17 @@ $(document).ready(function () {
                 },
             },
 
+            navigation: { 
+                nextEl: '.roadmap__btns__container .swiper-button-next',
+                prevEl: '.roadmap__btns__container .swiper-button-prev',
+            },
+
             breakpoints: {
-                850:{
+                950:{
                     slidesPerView: 2,
 
                 },
-                1210:{
+                1301:{
                     slidesPerView: 3,
 
                 },

@@ -3856,9 +3856,13 @@ a, button, .logo {
 }
 .roadmap__container {
   position: relative;
-  overflow: hidden;
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1300px) {
+  .roadmap__container {
+    max-width: 80%;
+  }
+}
+@media screen and (max-width: 950px) {
   .roadmap__container {
     width: 420px;
   }
@@ -3866,11 +3870,130 @@ a, button, .logo {
 @media screen and (max-width: 520px) {
   .roadmap__container {
     width: unset;
+    max-width: 80%;
+  }
+}
+@media screen and (max-width: 350px) {
+  .roadmap__container {
     max-width: 90%;
   }
 }
+@media screen and (max-width: 350px) {
+  .roadmap__btns__container {
+    display: none;
+  }
+}
+.roadmap__btns__container .swiper-button-next, .roadmap__btns__container .swiper-button-prev {
+  z-index: 1;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (max-width: 1300px) {
+  .roadmap__btns__container .swiper-button-next, .roadmap__btns__container .swiper-button-prev {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media screen and (max-width: 570px) {
+  .roadmap__btns__container .swiper-button-next, .roadmap__btns__container .swiper-button-prev {
+    width: 30px;
+    height: 30px;
+  }
+}
+.roadmap__btns__container .swiper-button-next svg, .roadmap__btns__container .swiper-button-prev svg {
+  width: 14px;
+  height: auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 570px) {
+  .roadmap__btns__container .swiper-button-next svg, .roadmap__btns__container .swiper-button-prev svg {
+    width: 8px;
+  }
+}
+.roadmap__btns__container .swiper-button-next svg path, .roadmap__btns__container .swiper-button-prev svg path {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  stroke: #61DE9B;
+}
+.roadmap__btns__container .swiper-button-next:after, .roadmap__btns__container .swiper-button-prev:after {
+  display: none;
+}
+.roadmap__btns__container .swiper-button-next:hover svg path, .roadmap__btns__container .swiper-button-prev:hover svg path {
+  stroke: #A169E7;
+}
+.roadmap__btns__container .swiper-button-prev {
+  left: -9%;
+}
+@media screen and (max-width: 1400px) {
+  .roadmap__btns__container .swiper-button-prev {
+    left: -5%;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .roadmap__btns__container .swiper-button-prev {
+    left: -6%;
+  }
+  .roadmap__btns__container .swiper-button-prev svg {
+    margin-right: 5px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .roadmap__btns__container .swiper-button-prev {
+    left: -15%;
+  }
+}
+@media screen and (max-width: 570px) {
+  .roadmap__btns__container .swiper-button-prev {
+    left: -10%;
+  }
+  .roadmap__btns__container .swiper-button-prev svg {
+    margin-right: 3px;
+  }
+}
+.roadmap__btns__container .swiper-button-next {
+  right: -9%;
+}
+@media screen and (max-width: 1400px) {
+  .roadmap__btns__container .swiper-button-next {
+    right: -5%;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .roadmap__btns__container .swiper-button-next {
+    right: -6%;
+  }
+  .roadmap__btns__container .swiper-button-next svg {
+    margin-left: 5px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .roadmap__btns__container .swiper-button-next {
+    right: -15%;
+  }
+}
+@media screen and (max-width: 570px) {
+  .roadmap__btns__container .swiper-button-next {
+    right: -10%;
+  }
+  .roadmap__btns__container .swiper-button-next svg {
+    margin-right: 3px;
+  }
+}
 .roadmap__wrapper {
+  overflow: hidden;
   height: 670px;
+  position: relative;
+  z-index: 2;
   padding-bottom: 64px;
 }
 @media screen and (max-width: 520px) {
@@ -3911,6 +4034,11 @@ a, button, .logo {
 @media screen and (max-width: 520px) {
   .roadmap-list__item {
     padding: 101px 22px 30px 67px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .roadmap-list__item {
+    padding: 80px 22px 30px 40px;
   }
 }
 .roadmap-list__item:hover .roadmap-list__status.status__complete {
